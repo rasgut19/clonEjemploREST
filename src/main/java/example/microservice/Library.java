@@ -59,4 +59,20 @@ public class Library {
 	    public Book removeBook(@PathParam("isbn") String id) {
 			return null;
 	    }
+	    
+	    @GET
+	    @Path("/saludo/{nombre}")
+	    public String saludar(@PathParam("nombre") String name) {
+			
+	    	System.out.println("Hello: " + name);
+		    return "Hello " + name + "!";
+	    }
+	    
+	    @GET
+	    @Path("/sumar/{dato1}/{dato2}")
+	    public int saludar(@PathParam("dato1") int dato1,@PathParam("dato2") int dato2) {
+	    	System.out.println("sumar: " + (dato1+dato2));
+		    return (dato1+dato2);
+	    }
+	    
 }
